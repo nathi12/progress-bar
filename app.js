@@ -30,6 +30,16 @@ btnTest.addEventListener('click', () => {
     line2.classList.toggle('line-2-moved');
     circle2.classList.toggle('circle-2-moved');
     line3.classList.toggle('line-3-moved');
+
+
+    if (circle2.classList.contains('long-circle-2')) {
+        circle2.classList.remove('long-circle-2');
+        circle2.classList.add('circle-2-moved');
+        circle2.removeChild(longCircleText2);
+
+        line3.classList.remove('line-3-moved-1');
+        line3.classList.add('line-3-moved');
+    }
 });
 
 
@@ -43,10 +53,20 @@ btnTest1.addEventListener('click', () => {
 
     circle2.classList.toggle('long-circle-2');
     circle2.classList.toggle('circle-2');
-
-    //moving stuff
-    line2.classList.toggle('line-2-moved-1');
     line3.classList.toggle('line-3-moved-1');
+
+
+    if (circle1.classList.contains('long-circle-1')) {
+        //move circle 1 to nomal circle
+        circle1.classList.remove('long-circle-1');
+        circle1.classList.add('circle-1');
+
+
+        line2.classList.remove('line-2-moved');
+        line2.classList.add('line-2');
+        circle1.removeChild(longCircleText1);
+
+    }
 });
 
 
