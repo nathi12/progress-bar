@@ -1,5 +1,5 @@
 #container {
-    border: black solid 1px;
+    border: inherit solid 1px;
     position: absolute;
     top: 50%;
     left: 50%;
